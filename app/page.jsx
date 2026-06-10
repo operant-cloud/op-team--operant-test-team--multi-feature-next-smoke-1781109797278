@@ -1,4 +1,5 @@
-import { activityFeed, overviewMetrics, projectHealth } from "./overviewData";
+import RoadmapBoard from "./RoadmapBoard";
+import { activityFeed, overviewMetrics, projectHealth, releaseTimeline, roadmapTasks } from "./overviewData";
 
 export default function Home() {
   return (
@@ -79,6 +80,8 @@ export default function Home() {
           </ol>
         </section>
       </div>
+
+      <RoadmapBoard tasks={roadmapTasks} timeline={releaseTimeline} />
     </main>
   );
 }

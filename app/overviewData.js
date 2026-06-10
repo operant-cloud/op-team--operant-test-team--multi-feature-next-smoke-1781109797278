@@ -61,3 +61,91 @@ export const activityFeed = [
     context: "Error budget remains within quarterly target",
   },
 ];
+
+export const roadmapTasks = [
+  {
+    title: "Release readiness command center",
+    description: "Consolidate go/no-go checks, owner approvals, and incident handoff status in the launch view.",
+    status: "In progress",
+    owner: "Maya Chen",
+    risk: "Medium",
+    targetRelease: "Aurora 2.8",
+    effort: "L",
+  },
+  {
+    title: "Deployment pause controls",
+    description: "Add scoped pause and resume actions for services with active health regressions.",
+    status: "Planned",
+    owner: "Jon Bell",
+    risk: "High",
+    targetRelease: "Aurora 2.9",
+    effort: "M",
+  },
+  {
+    title: "Partner API rollout guardrails",
+    description: "Gate partner traffic ramp by contract state, error budget, and endpoint latency.",
+    status: "Blocked",
+    owner: "Ravi Patel",
+    risk: "High",
+    targetRelease: "Aurora 2.8",
+    effort: "L",
+  },
+  {
+    title: "QA evidence attachments",
+    description: "Attach test runs, screenshots, and exception notes directly to each release gate.",
+    status: "Ready",
+    owner: "Nora Lewis",
+    risk: "Low",
+    targetRelease: "Aurora 2.8",
+    effort: "S",
+  },
+  {
+    title: "Billing orchestration retries",
+    description: "Expose retry windows and reconciliation state for failed downstream billing jobs.",
+    status: "In progress",
+    owner: "Priya Shah",
+    risk: "Medium",
+    targetRelease: "Aurora 3.0",
+    effort: "M",
+  },
+  {
+    title: "Executive launch digest",
+    description: "Generate a daily release summary with risks, ship dates, and recently closed blockers.",
+    status: "Done",
+    owner: "Leo Grant",
+    risk: "Low",
+    targetRelease: "Aurora 2.7",
+    effort: "S",
+  },
+];
+
+export const releaseTimeline = [
+  {
+    date: "Jun 14",
+    release: "Aurora 2.7",
+    stage: "Production stabilization",
+    detail: "Digest automation shipped; monitoring elevated through the weekend.",
+    status: "Done",
+  },
+  {
+    date: "Jun 28",
+    release: "Aurora 2.8",
+    stage: "Release candidate",
+    detail: "Readiness center, API guardrails, and QA evidence attachments enter final validation.",
+    status: "In progress",
+  },
+  {
+    date: "Jul 12",
+    release: "Aurora 2.9",
+    stage: "Controlled rollout",
+    detail: "Deployment pause controls launch behind an operations-only feature flag.",
+    status: "Planned",
+  },
+  {
+    date: "Jul 26",
+    release: "Aurora 3.0",
+    stage: "Platform release",
+    detail: "Billing retries and service-level deployment insights move to general availability.",
+    status: "Planned",
+  },
+];
