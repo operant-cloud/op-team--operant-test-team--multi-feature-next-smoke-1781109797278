@@ -192,7 +192,7 @@ h3 {
 
 .content-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr) minmax(280px, 0.8fr);
   gap: 16px;
   margin-top: 16px;
 }
@@ -216,7 +216,8 @@ h3 {
 }
 
 .project-list,
-.activity-list {
+.activity-list,
+.risk-list {
   padding: 0;
   margin: 22px 0 0;
   list-style: none;
@@ -289,6 +290,67 @@ h3 {
 }
 
 .activity-list span {
+  color: #66716c;
+  line-height: 1.45;
+}
+
+.risk-list {
+  display: grid;
+  gap: 12px;
+}
+
+.risk-list li {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px 0;
+  border-top: 1px solid #e0e6e2;
+}
+
+.risk-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.risk-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: #d58a18;
+  box-shadow: 0 0 0 5px rgba(213, 138, 24, 0.13);
+}
+
+.risk-dot--ready {
+  background: #22a06b;
+  box-shadow: 0 0 0 5px rgba(34, 160, 107, 0.13);
+}
+
+.risk-dot--watching {
+  background: #d58a18;
+}
+
+.risk-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.risk-row h3 {
+  margin-bottom: 0;
+}
+
+.risk-row span {
+  flex: 0 0 auto;
+  color: #263530;
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.risk-list p {
+  margin: 5px 0 0;
   color: #66716c;
   line-height: 1.45;
 }
@@ -556,7 +618,8 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .activity-panel {
+  .activity-panel,
+  .risk-panel {
     grid-column: 1 / -1;
   }
 }

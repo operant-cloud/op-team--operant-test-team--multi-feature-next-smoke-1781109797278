@@ -62,6 +62,12 @@ export const activityFeed = [
   },
 ];
 
+export const releaseRisks = [
+  { label: "API freeze", status: "Aligned", detail: "Contract changes locked for Aurora 2.8", tone: "ready" },
+  { label: "QA coverage", status: "Watching", detail: "Regression suite at 91% of target", tone: "watching" },
+  { label: "Comms readiness", status: "On track", detail: "Customer notes queued for review", tone: "ready" },
+];
+
 export const roadmapTasks = [
   {
     title: "Release readiness command center",

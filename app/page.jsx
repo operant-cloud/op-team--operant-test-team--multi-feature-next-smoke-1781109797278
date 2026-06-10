@@ -1,5 +1,5 @@
 import RoadmapBoard from "./RoadmapBoard";
-import { activityFeed, overviewMetrics, projectHealth, releaseTimeline, roadmapTasks } from "./overviewData";
+import { activityFeed, overviewMetrics, projectHealth, releaseRisks, releaseTimeline, roadmapTasks } from "./overviewData";
 
 export default function Home() {
   return (
@@ -78,6 +78,30 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section className="panel risk-panel" aria-labelledby="release-risk-title">
+          <div className="panel-heading">
+            <div>
+              <p className="eyebrow">Readiness</p>
+              <h2 id="release-risk-title">Release risk</h2>
+            </div>
+            <span className="panel-count">3 gates</span>
+          </div>
+          <ul className="risk-list">
+            {releaseRisks.map((risk) => (
+              <li key={risk.label}>
+                <span className={`risk-dot risk-dot--${risk.tone}`} aria-hidden="true" />
+                <div>
+                  <div className="risk-row">
+                    <h3>{risk.label}</h3>
+                    <span>{risk.status}</span>
+                  </div>
+                  <p>{risk.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
 
