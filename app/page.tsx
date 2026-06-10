@@ -31,6 +31,8 @@ const releaseItems = [
 ];
 
 export default function Home() {
+  const previewSecretInjected = process.env.OPERANT_DEPLOYMENT_SMOKE === "preview-secret-ok";
+
   return (
     <main className="studio-shell">
       <aside className="sidebar" aria-label="Primary navigation">
@@ -124,6 +126,10 @@ export default function Home() {
           <div>
             <p className="eyebrow">Settings</p>
             <h3>Workspace controls</h3>
+          </div>
+          <div className="deployment-smoke" aria-label="Deployment secret status">
+            <span>Preview secret</span>
+            <strong>{previewSecretInjected ? "injected" : "missing"}</strong>
           </div>
           <div className="settings-actions" aria-label="Settings shortcuts">
             <button type="button">Access</button>
