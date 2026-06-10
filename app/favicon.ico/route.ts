@@ -1,10 +1,10 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-
-export const runtime = "nodejs";
+const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#17352a"/>
+  <path d="M8 22V10h3.2v9.2H24V22H8Z" fill="#d9f275"/>
+  <path d="M15 16.7V10h3.2v4h5.2v2.7H15Z" fill="#f6fbf3"/>
+</svg>`;
 
 export async function GET() {
-  const icon = await readFile(path.join(process.cwd(), "app", "icon.svg"));
   return new Response(icon, {
     headers: {
       "cache-control": "public, max-age=31536000, immutable",
